@@ -15,8 +15,7 @@ func (s *CountdownOperationsSpy) Sleep() {
 	s.Calls = append(s.Calls, sleep)
 }
 
-//goland:noinspection GoUnusedParameter
-func (s *CountdownOperationsSpy) Write(p []byte) (n int, err error) {
+func (s *CountdownOperationsSpy) Write(_ []byte) (n int, err error) {
 	s.Calls = append(s.Calls, write)
 	return
 }
